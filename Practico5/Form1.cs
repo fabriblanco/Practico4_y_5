@@ -102,7 +102,25 @@ namespace Practico5
                 int rowIndex = dataGridView1.Rows.Add(apellido, nombre, fecha, sexoSeleccionado, vacio, saldo, imagen, ruta);
 
                 // Configurar valor en la columna de botón para la fila recién agregada
-                dataGridView1.Rows[rowIndex].Cells["ColumnaEliminar"].Value = "Eliminar"; // Ca
+                dataGridView1.Rows[rowIndex].Cells["ColumnaEliminar"].Value = "Eliminar";
+                dataGridView1.Rows[rowIndex].Cells["ColumnaImagen"].Value = imagenSeleccionada;
+                pictureBox1.Image = imagenSeleccionada;
+
+                // Cambia la fuente de las columnas "Nombre" y "Apellido" en el DataGridView
+                DataGridViewCellStyle nombreCellStyle = new DataGridViewCellStyle();
+                nombreCellStyle.Font = new Font("Century Gothic", 12); // Cambia la fuente según tus preferencias
+
+                DataGridViewCellStyle apellidoCellStyle = new DataGridViewCellStyle();
+                apellidoCellStyle.Font = new Font("Century Gothic", 12); // Cambia la fuente según tus preferencias
+
+                // Asigna el nuevo estilo de celda a las columnas específicas
+                dataGridView1.Columns["ColuNombre"].DefaultCellStyle = nombreCellStyle;
+                dataGridView1.Columns["coluApellido"].DefaultCellStyle = apellidoCellStyle;
+
+                textNombre.Clear();
+                textApellido.Clear();
+                textBoxSaldo.Clear();
+                textFoto.Clear();
 
                 if (saldo < 50)
                 {
@@ -145,5 +163,7 @@ namespace Practico5
             return val;
 
         }
+
+     
     }
 }

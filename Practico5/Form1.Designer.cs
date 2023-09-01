@@ -44,7 +44,8 @@
             btnGuardar = new Button();
             btnFoto = new Button();
             dataGridView1 = new DataGridView();
-            Apellido = new DataGridViewTextBoxColumn();
+            textBoxSaldo = new TextBox();
+            coluApellido = new DataGridViewTextBoxColumn();
             ColuNombre = new DataGridViewTextBoxColumn();
             CfechaNac = new DataGridViewTextBoxColumn();
             Csexo = new DataGridViewTextBoxColumn();
@@ -52,7 +53,6 @@
             Csaldo = new DataGridViewTextBoxColumn();
             ColumnaImagen = new DataGridViewImageColumn();
             Cruta = new DataGridViewTextBoxColumn();
-            textBoxSaldo = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -219,7 +219,7 @@
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Apellido, ColuNombre, CfechaNac, Csexo, ColumnaEliminar, Csaldo, ColumnaImagen, Cruta });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { coluApellido, ColuNombre, CfechaNac, Csexo, ColumnaEliminar, Csaldo, ColumnaImagen, Cruta });
             dataGridView1.Location = new Point(1, 373);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -227,12 +227,19 @@
             dataGridView1.TabIndex = 16;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // Apellido
+            // textBoxSaldo
             // 
-            Apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            Apellido.HeaderText = "Apellido";
-            Apellido.MinimumWidth = 30;
-            Apellido.Name = "Apellido";
+            textBoxSaldo.Location = new Point(158, 233);
+            textBoxSaldo.Name = "textBoxSaldo";
+            textBoxSaldo.Size = new Size(222, 23);
+            textBoxSaldo.TabIndex = 17;
+            // 
+            // coluApellido
+            // 
+            coluApellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            coluApellido.HeaderText = "Apellido";
+            coluApellido.MinimumWidth = 30;
+            coluApellido.Name = "coluApellido";
             // 
             // ColuNombre
             // 
@@ -272,13 +279,6 @@
             // 
             Cruta.HeaderText = "Ruta";
             Cruta.Name = "Cruta";
-            // 
-            // textBoxSaldo
-            // 
-            textBoxSaldo.Location = new Point(158, 233);
-            textBoxSaldo.Name = "textBoxSaldo";
-            textBoxSaldo.Size = new Size(222, 23);
-            textBoxSaldo.TabIndex = 17;
             // 
             // Form1
             // 
@@ -330,7 +330,7 @@
         private Button btnFoto;
         private DataGridView dataGridView1;
         private TextBox textBoxSaldo;
-        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn coluApellido;
         private DataGridViewTextBoxColumn ColuNombre;
         private DataGridViewTextBoxColumn CfechaNac;
         private DataGridViewTextBoxColumn Csexo;
